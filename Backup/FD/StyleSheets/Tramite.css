@@ -1,0 +1,31 @@
+﻿#encabezadoDatosTramites
+{
+	text-align:left;	
+	background-image:url('../Imagenes/datosTramite.jpg');
+	background-repeat:no-repeat;
+	background-color:Transparent;
+	color:#FFFFFF;
+	font-family:verdana,arial,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	margin-bottom:5px;
+	margin-top:15px;
+	width:740px; 
+	height:30px;
+}
+
+#encabezadoDatosAnexos
+{
+	text-align:left;	
+	background-image:url('../Imagenes/datosRubrica.jpg');
+	background-repeat:no-repeat;
+	background-color:Transparent;
+	color:#FFFFFF;
+	font-family:verdana,arial,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	margin-bottom:5px;
+	margin-top:15px;
+	width:740px; 
+	height:30px;
+}

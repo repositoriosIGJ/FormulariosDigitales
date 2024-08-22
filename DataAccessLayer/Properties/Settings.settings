@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FD.DataAccessLayer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DataAccessLayer_sdigipro_TasasIGJ" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://zidane.igj.jus.gov.ar:9000/WS-IGJ-Generic.asmx</Value>
+    </Setting>
+    <Setting Name="DataAccessLayer_Zidane_TasasIGJ" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://sdigipro.igj.jus.gov.ar:6000/WS-IGJ-Tasas.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

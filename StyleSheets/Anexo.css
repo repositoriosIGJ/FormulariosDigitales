@@ -1,0 +1,126 @@
+﻿.anexos .tablalibro
+{
+	width: 80%;
+	margin: 0px auto;
+	border: 1px solid #C3C8CD;
+}
+
+.anexos .tablalibrohidden
+{
+	width: 80%;
+	margin: 0px auto;
+	border: 1px solid #C3C8CD;
+	display: none;
+}
+
+.anexos .tituloanexo
+{
+	color: #245E98;
+	border: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 17px;
+	text-transform: uppercase;
+	padding-top: 5px;
+}
+
+.anexos .tituloformulario
+{
+	color: #245E98;
+	border: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding-top: 5px;
+}
+
+.anexos .titulolibro
+{
+	color: #FFFFFF;
+	border: 1px solid #C3C8CD;
+	text-align: center;
+	background-color: #74A4D3;
+	font-weight: bold;
+	font-size: medium;
+	height: 24px;
+	text-transform: uppercase;
+}
+
+.anexos .filalibro
+{
+	color: #FFFFFF;
+	border: 1px solid #C3C8CD;
+	padding-left: 10px;
+	background-color: #74A4D3;
+	height: 22px;
+}
+
+.anexos .fila1blanca
+{
+	border: 1px solid #C3C8CD;
+	width: 150px;
+	background-color: #FFFFFF;
+	height: 20px;
+}
+
+.anexos .fila2blanca
+{
+	border: 1px solid #C3C8CD;
+	width: 450px;
+	background-color: #FFFFFF;
+	height: 20px;
+}
+
+.anexos .fila1celeste
+{
+	border: 1px solid #C3C8CD;
+	width: 150px;
+	background-color: #E0E6ED;
+	height: 20px;
+}
+
+.anexos .fila2celeste
+{
+	border: 1px solid #C3C8CD;
+	width: 450px;
+	background-color: #E0E6ED;
+	height: 20px;
+}
+
+.anexos .filachk
+{
+	color: #FFFFFF;
+	border: 1px solid #C3C8CD;
+	text-align: left;
+	background-color: #04c2cb;
+	font-weight: bold;
+	font-size: small;
+	height: 24px; /*text-transform: uppercase;*/
+}
+
+.anexos .chk input
+{
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+}
+
+.anexos .chk label
+{
+	display: inline;
+	font-size: 12px;
+}
+
+.anexos .chk label span
+{
+	vertical-align: middle;
+}
+
+.anexos .txtanexo
+{
+	font-family: sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+	border: 1px solid #C3C8CD;
+}

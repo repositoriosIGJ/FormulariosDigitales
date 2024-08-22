@@ -1,0 +1,119 @@
+﻿
+#paneles
+{
+	margin:0 auto;
+	text-align:center;
+}
+
+#encabezadoDatosPersonales 
+{
+	text-align:left;	
+	background-image:url('../Imagenes/datosPresentante.jpg');
+	background-repeat:no-repeat;
+	background-color:Transparent;
+	color:#FFFFFF;
+	font-family:verdana,arial,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	margin-bottom:5px;
+	margin-top:15px;
+	width:740px; 
+	height:30px;
+}
+
+#botonConfirmar
+{
+	 text-align:right;
+	 margin-right:145px;	 
+}
+
+.contenido
+{
+	
+	background-image:url('../Imagenes/contenido_bkg.jpg');
+	background-repeat:repeat-y;
+	width:740px;
+	margin-top: -6px;
+}
+
+.contenidobanelco
+{
+	/*background-image:url('../Imagenes/contenido_bkg.jpg');*/
+	padding: 4px 6px 4px 6px;
+	border-radius: 6px 6px 6px 6px;
+	background-color:#009BC9;
+	/*background-repeat:repeat-y;*/
+	width: 580px;
+	color: #FFFFFF;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    /*margin-left: 38px;
+    text-transform: uppercase;*/
+}
+
+.contenidobanelco .banelco
+{
+	padding: 1px 2px 1px 2px;
+	border-radius: 2px 2px 2px 2px;
+	background-color:#FFFFFF;
+	/*background-repeat:repeat-y;*/
+	/*width: 460px;*/
+	color: red;
+    font-family: sans-serif;
+    font-size: 10px;
+    /*font-weight: bold;*/
+    /*letter-spacing: 1px;*/
+    /*margin-left: 38px;
+    text-transform: uppercase;*/
+}
+
+.contenidobanelco .txtbanelco
+{
+	/*color: #FFFFFF;*/
+    font-family: sans-serif;
+    font-size: 12px;
+    /*font-weight: bold;*/
+    letter-spacing: 1px;
+}
+
+.contenidobanelco .divErrorBanelco
+{
+	color: #FFFFFF;
+    font-family: sans-serif;
+    /*display: block;*/
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+    background-color: #D31145;
+    padding: 4px 6px 4px 6px;
+    border-radius: 4px 4px 4px 4px;
+}
+
+/*.contenidobanelco .divchkFormaPago .chkFormaPago input
+{
+	background-color: #D31145;
+	margin: -3px; 
+	padding: 10px 2px 10px 5px; 
+	position: relative; 
+	top: -14px; 
+	vertical-align: middle;
+	*margin: 0px !important; /* Hack Sólo IE7 
+}*/
+
+.contenidoInterno
+{
+	padding:0 10px 0 10px;
+}
+
+.contenidoBottom
+{
+	text-align:center;	
+	background-image:url('../Imagenes/contenidoBottom_bkg.jpg');
+	background-repeat:no-repeat;
+	width:740px;
+	height:3px;
+	
+}

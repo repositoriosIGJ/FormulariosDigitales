@@ -1,0 +1,52 @@
+﻿#encabezadoDatosEntidad
+{
+	text-align: left;
+	background-image: url('../Imagenes/datosEntidad.jpg');
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	font-family: verdana,arial,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 15px;
+	width: 740px;
+	height: 30px;
+}
+
+#imgBanelco1
+{
+	/* 	*margin-right: -4px !important; 	*/
+	margin-right: -4px !important;
+}
+#imgBanelco2
+{
+	/* 	*margin-left: -4px !important; 	*/
+	margin-left: -4px !important;
+}
+#chkFormaPago
+{
+	background-color: #D31145;
+	margin: -3px;
+	padding: 10px 2px 10px 5px;
+	position: relative;
+	top: -14px;
+	vertical-align: middle;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	margin-left: -4px !important;
+	margin-right: -4px !important;
+	padding-top: 6px !important;
+	padding-bottom: 9px !important; 
+	/*     *margin-top: 0px !important;      *margin-bottom: 0px !important;      *margin-left: -4px !important;     *margin-right: -4px !important;     *padding-top: 6px !important;     *padding-bottom: 9px !important; 	*/
+}
+/*
+<asp:Image ID="imgBanelco1" runat="server" Style="*margin-right: -4px !important;"
+                                        ImageUrl="Imagenes/imgBanelco1.jpg" />
+<asp:CheckBox ID="chkFormaPago" runat="server" Style="background-color: #D31145;
+                                        margin: -3px; padding: 10px 2px 10px 5px; position: relative; top: -14px; vertical-align: middle;
+                                        *margin-top: 0px !important; *margin-bottom: 0px !important; *margin-left: -4px !important;
+                                        *margin-right: -4px !important; *padding-top: 6px !important; *padding-bottom: 9px !important;"
+                                        OnCheckedChanged="chkFormaPago_CheckedChanged" AutoPostBack="True" />
+ <asp:Image ID="imgBanelco2" runat="server" Style="*margin-left: -4px !important;"
+                                        ImageUrl="Imagenes/imgBanelco2.jpg" />
+*/

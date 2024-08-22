@@ -1,0 +1,454 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DigiForm.master.cs" Inherits="DigiForm" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Inspección General de Justicia</title>
+    <%-----------------------------STYLE SHEETS------------------------------%>
+    <link href="StyleSheets/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="StyleSheets/MasterPage.css" rel="stylesheet" type="text/css" />
+    <link href="StyleSheets/Default.css" rel="stylesheet" type="text/css" />
+    <link href="StyleSheets/Tramite.css" rel="stylesheet" type="text/css" />
+    <link href="StyleSheets/Anexo.css" rel="stylesheet" type="text/css" />
+    <link href="StyleSheets/Entidad.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="imagenes/favicon1.ico" type="image/ico" />
+    <%--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>--%>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <script type="text/javascript" src="scrolltopcontrol.js"></script>
+
+    <script src="jquery.min.js"></script>
+
+    <script language="javascript" type="text/javascript">
+        
+        //function redirectIGJ()
+        //{
+        //   window.location = "http://www.jus.gov.ar/igj/";
+        //}
+        
+        function maximizeBrowserWindow()
+        {
+            document.getElementById('<%=testBox.ClientID%>').value = "yes"; 
+
+            top.window.moveTo(0,0);
+            if (document.all) 
+            {
+                top.window.resizeTo(screen.availWidth,screen.availHeight);
+            }
+            else if (document.layers||document.getElementById) 
+            {
+               if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth)
+               {
+                   top.window.outerHeight = screen.availHeight;
+                   top.window.outerWidth = screen.availWidth;
+               }
+            }
+        }
+        
+    </script>
+
+</head>
+<body onload="maximizeBrowserWindow()">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+
+        <script language="JavaScript" type="text/javascript">
+           javascript:window.history.forward(1); 
+        </script>
+
+        <input type="hidden" id="testBox" runat="server" value="no" />
+        <div id="topcontrol" style="position: fixed; bottom: 5px; right: 5px; opacity: 1;
+            cursor: pointer;" title="Scroll Back to Top">
+        </div>
+        <div id="mainContainer">
+            <div id="bodyContainer">
+                <div id="dataContainer" onclick="redirectIGJ()" onmouseover="this.style.cursor='hand'">
+                    <div id="headerContainer">
+                    </div>
+                    <div id="menu_cabezal">
+                        <!--<div class="box-izq">
+                            <a target="_parent" href="http://www.jus.gov.ar/igj/index.php">
+                                <img alt="" src="imagenes/cabezal-ico_01_02.png" />
+                            </a>
+                        </div>-->
+                        <div id="cab_menu">
+                            <asp:Label ID="lblBarraFD" runat="server" Text="SISTEMA DE FORMULARIOS DIGITALES"></asp:Label>
+                        </div>
+                        <div class="box-der">
+                            <%--<a onclick="this.blur(); Modalbox.show('', this.href, {width: 610, height: 500}); return false;"
+                                href="">
+                                <!--ayuda.htm-->
+                                <!--<img alt="" src="imagenes/cabezal-icon_01.png" />
+                                </a>--%>
+                            <%--<a href="mailto:infoigj@jus.gov.ar">--%>
+                            <a href="mailto:infoigj@jus.gov.ar">
+                                <img style="margin-top: 2px;" alt="" src="imagenes/cabezal-icon_02.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div id="datos_utiles">
+                        <%--<div id="datos_utiles_fecha">
+                                <div style="vertical-align: middle;">
+                                    <asp:Label ID="lblFecha" runat="server" Text="Label"></asp:Label>
+                                </div>
+                            </div>--%>
+                        <center>
+                            <div id="datos_utiles_links">
+                                <%--<asp:ImageButton ID="imgBtnRecomendaciones" runat="server" ImageUrl="Imagenes/Recomendaciones.jpg"
+                                    OnClick="imgBtnRecomendaciones_Click" ValidationGroup="datosUtiles" />--%>
+                                <input class="bluebutton iebb" type="button" value="Recomendaciones" onclick="window.open('DatosUtiles/Recomendaciones.pdf','_blank');" />
+                                <%--<asp:ImageButton ID="imgBtnManualdeUsuario" runat="server" ImageUrl="Imagenes/ManualdeUsuario.jpg"
+                                    OnClick="imgBtnManualdeUsuario_Click" ValidationGroup="datosUtiles" />--%>
+                                <input class="bluebutton iebb" type="button" value="Manual del Usuario" onclick="window.open('DatosUtiles/Manual_de_Usuario_FDv16b.pdf','_blank');" />
+                                <%--<asp:ImageButton ID="imbBtnFromReimputacion" runat="server" ImageUrl="Imagenes/FormulariodeReimputacion.jpg"
+                                    OnClick="imbBtnFromReimputacion_Click" ValidationGroup="datosUtiles" />--%>
+                                <input class="bluebutton iebb" type="button" value="Formulario de Reimputación" onclick="window.open('Pdf/Formulario de Reimputación.pdf','_blank');" />
+                                <%--<input class="bluebutton iebb" type="button" value="Anexos de Rúbrica" onclick="window.open('Pdf/AnexosRubrica.pdf','_blank');" />--%>
+                                <asp:Button ID="BtnRubrica" runat="server" Text="Anexos de Rúbrica" CssClass="bluebutton iebb" OnClick="BtnRubrica_Click" ValidationGroup="datosUtiles"/>
+                                <%--<asp:ImageButton ID="imgBtnDescargueAcrobat" runat="server" ImageUrl="Imagenes/DescAcrobat.jpg"
+                                    OnClick="imgBtnDescargueAcrobat_Click" ValidationGroup="datosUtiles" />--%>
+                                <input class="bluebutton iebb" type="button" value="Adobe Reader" onclick="window.open('http://get.adobe.com/es/reader/','_blank');" />
+                                <label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <div id="contenedorForm">
+                    <%---------- PANEL BARRA INFO FIRMANTE ----------%>
+                    <asp:Panel BackImageUrl="/imagenes/" ID="pnlInfoFirmante" runat="server" Visible="false">
+                        <div class="cabezaResumen">
+                            <div style="margin-top: 5px; margin-left: 15px;">
+                                <asp:Label ID="lblTituloInfoFirmante" runat="server" Text="Datos del Presentante"
+                                    Font-Size="Medium" Font-Bold="True" ForeColor="#4B5766" Style="display: block;
+                                    padding: 4px 0;"></asp:Label>
+                            </div>
+                        </div>
+                        <table class="tablaResumen">
+                            <tr>
+                                <td>
+                                    <table style="margin-top: 5px; margin-left: 10px; width: 100%;">
+                                        <tr>
+                                            <td style="margin-left: 5px;">
+                                                <asp:Label ID="lblDniFirmante" runat="server" Text="DNI/LE/LC:" Font-Bold="True"
+                                                    Font-Size="X-Small" />
+                                            </td>
+                                            <td>
+                                                <asp:Label ID="lblNomFirmante" runat="server" Text="Nombre: " Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                            <td>
+                                                <asp:Label ID="lblApeFirmante" runat="server" Text="Apellido: " Font-Bold="True"
+                                                    Font-Size="X-Small" />
+                                            </td>
+                                            <td>
+                                                <asp:Label ID="lblMailFirmante" runat="server" Text="Mail: " Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                    <%---------- PANEL BARRA INFO TRAMITE ----------%>
+                    <asp:Panel BackImageUrl="/imagenes/" ID="pnlInfoTramite" runat="server" Visible="false">
+                        <div class="cabezaResumen">
+                            <div style="margin-top: 5px; margin-left: 15px;">
+                                <asp:Label ID="Label1" runat="server" Text="Datos del Trámite" Font-Size="Medium"
+                                    Font-Bold="True" ForeColor="#4B5766" Style="display: block; padding-top: 4px;"></asp:Label>
+                            </div>
+                        </div>
+                        <table class="tablaResumen">
+                            <tr>
+                                <td>
+                                    <table style="margin-top: 5px; margin-left: 10px; width: 100%;">
+                                        <tr>
+                                            <td style="width: 36px">
+                                                <asp:Label ID="lblNomTramite" runat="server" Text="Nombre: " Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                            <td style="text-align: left;">
+                                                <asp:Label ID="lblDescTramite" runat="server" Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 36px;">
+                                                <asp:Label ID="lblUrgente" runat="server" Text="Urgente: " Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                            <td style="text-align: left;">
+                                                <asp:Label ID="lblDescUrgente" runat="server" Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                    <asp:Panel ID="pnlInfoDenomSoc" runat="server" Visible="false">
+                        <div class="cabezaResumen">
+                            <div style="margin-top: 5px; margin-left: 15px;">
+                                <asp:Label ID="lblDenomProp" runat="server" Text="Denominaciones Propuestas" Font-Size="Medium"
+                                    Font-Bold="True" ForeColor="#4B5766"></asp:Label>
+                            </div>
+                        </div>
+                        <table class="tablaResumen">
+                            <tr>
+                                <td>
+                                    <br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10px;">
+                                </td>
+                                <td style="width: 50px;">
+                                    <asp:Label ID="lblOp1" runat="server" Text="Opción 1: " Font-Bold="True" Font-Size="X-Small"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblDescDenomOp1" runat="server" Style="position: relative" Font-Size="X-Small"></asp:Label></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10px;">
+                                </td>
+                                <td style="width: 50px">
+                                    <asp:Label ID="lblOp2" runat="server" Text="Opción 2: " Font-Bold="True" Font-Size="X-Small"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblDescDenomOp2" runat="server" Style="position: relative" Font-Size="X-Small"></asp:Label></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10px;">
+                                </td>
+                                <td style="width: 50px">
+                                    <asp:Label ID="lblOp3" runat="server" Text="Opción 3: " Font-Bold="True" Font-Size="X-Small"></asp:Label>
+                                </td>
+                                <td>
+                                    <asp:Label ID="lblDescDenomOp3" runat="server" Style="position: relative" Font-Size="X-Small"></asp:Label>
+                                    <br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <br />
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                    <%---------- PANEL BARRA INFO CONSTITUYENTE ----------%>
+                    <asp:Panel ID="pnlConstituyente" runat="server" Visible="false">
+                        <div class="cabezaResumen">
+                            <div style="margin-top: 5px; margin-left: 15px;">
+                                <asp:Label ID="lblTituloInfoConstituyente" runat="server" Text="Constituyente" Font-Size="Medium"
+                                    Font-Bold="True" ForeColor="#4B5766"></asp:Label>
+                            </div>
+                        </div>
+                        <%---------- SUBPANEL PERSONA ----------%>
+                        <asp:Panel runat="server" ID="pnlPersonaConstituyente" Visible="false">
+                            <table class="tablaResumen">
+                                <tr>
+                                    <td>
+                                        <table style="margin-top: 5px; margin-left: 10px; width: 100%;">
+                                            <tr>
+                                                <td style="width: 98px">
+                                                    <asp:Label ID="lblNumDoc1" runat="server" Text="DNI/LE/LC:" Font-Size="X-Small"></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <asp:Label ID="lblDescNumDoc1" runat="server" Font-Size="X-Small"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 50px">
+                                                    <asp:Label ID="lblNombreYApeConstituyente1" runat="server" Text="Nombre y Apellido: "
+                                                        Width="94px" Font-Size="X-Small"></asp:Label>
+                                                </td>
+                                                <td colspan="3">
+                                                    <asp:Label ID="lblDescNomYApeConsti1" runat="server" Style="position: relative; top: 1px;"
+                                                        Font-Size="X-Small"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 98px">
+                                                    <asp:Label ID="lblNumDoc2" runat="server" Text="DNI/LE/LC:" Font-Size="X-Small"></asp:Label>
+                                                </td>
+                                                <td>
+                                                    <asp:Label ID="lblDescNumDoc2" runat="server" Font-Size="X-Small"></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 50px">
+                                                    <asp:Label ID="lblNombreYApeConstituyente2" runat="server" Text="Nombre y Apellido: "
+                                                        Width="94px" Font-Size="X-Small"></asp:Label>
+                                                </td>
+                                                <td colspan="3">
+                                                    <asp:Label ID="lblDescNomYApeConsti2" runat="server" Style="position: relative; left: 0px;"
+                                                        Font-Size="X-Small"></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </asp:Panel>
+                        <%---------- SUBPANEL CONSTITUYENTE ----------%>
+                        <asp:Panel runat="server" ID="pnlDenomConstituyente" Visible="false">
+                            <table class="tablaResumen">
+                                <tr>
+                                    <td style="width: 50px">
+                                        <asp:Label ID="lblDenominacion1" runat="server" Text="Opción 1: " Font-Bold="True"
+                                            Font-Size="X-Small"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="lblDescDenom1Consti" runat="server" Style="position: relative" Font-Size="X-Small"></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50px">
+                                        <asp:Label ID="lblDenominacion2" runat="server" Text="Opción 2: " Font-Bold="True"
+                                            Font-Size="X-Small"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="lblDescDenom2Consti" runat="server" Style="position: relative" Font-Size="X-Small"></asp:Label></td>
+                                </tr>
+                            </table>
+                        </asp:Panel>
+                        <%---------- SUBPANEL MIXTO ----------%>
+                        <asp:Panel runat="server" ID="pnlMixtoMaster" Visible="false">
+                            <table class="tablaResumen">
+                                <tr>
+                                    <td style="width: 98px">
+                                        <asp:Label ID="lblNumDocMixto" runat="server" Text="DNI/LE/LC:" Font-Size="X-Small"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="lblDescNumDocMixto" runat="server" Font-Size="X-Small"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50px">
+                                        <asp:Label ID="lblNombreYApeConstituyenteMixto" runat="server" Text="Nombre y Apellido: "
+                                            Width="94px" Font-Size="X-Small"></asp:Label>
+                                    </td>
+                                    <td colspan="3">
+                                        <asp:Label ID="lblDescNomYApeConstiMixto" runat="server" Style="position: relative;
+                                            top: 1px;" Font-Size="X-Small"></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 50px">
+                                        <asp:Label ID="lblDenominacionMixto" runat="server" Text="Opción 1: " Font-Bold="True"
+                                            Font-Size="X-Small"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:Label ID="lblDescDenomConstiMixto" runat="server" Style="position: relative"
+                                            Font-Size="X-Small"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </asp:Panel>
+                    </asp:Panel>
+                    <%---------- PANEL BARRA INFO ENTIDAD ----------%>
+                    <asp:Panel BackImageUrl="/imagenes/" ID="pnlInfoEntidad" runat="server" Visible="false">
+                        <div class="cabezaResumen">
+                            <div style="margin-top: 5px; margin-left: 15px;">
+                                <asp:Label ID="lblTituloInfoEntidad" runat="server" Text="Datos de la Entidad" Font-Size="Medium"
+                                    Font-Bold="True" ForeColor="#4B5766" Style="display: block; padding-top: 4px;"></asp:Label>
+                            </div>
+                        </div>
+                        <table class="tablaResumen">
+                            <tr>
+                                <td>
+                                    <table style="margin-top: 5px; margin-left: 10px; width: 100%;">
+                                        <tr>
+                                            <td style="width: 73px">
+                                                <asp:Label ID="lblNroCorrelativo" runat="server" Text="N° Correlativo: " Font-Bold="True"
+                                                    Font-Size="X-Small" />
+                                            </td>
+                                            <td style="text-align: left;">
+                                                <asp:Label ID="lblDescNroCorrelativo" runat="server" Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 73px;">
+                                                <asp:Label ID="lblNombreEnt" runat="server" Text="Nombre: " Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                            <td style="text-align: left;">
+                                                <asp:Label ID="lblDescNombreEnt" runat="server" Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 73px;">
+                                                <asp:Label ID="lblTipoEnt" runat="server" Text="Tipo: " Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                            <td style="text-align: left;">
+                                                <asp:Label ID="lblDescTipoEnt" runat="server" Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                        </tr>
+                                        <!--TODO_NOCUIT: No se muestra el Cuit-->
+                                        <tr>
+                                            <td style="width: 73px;">
+                                                <asp:Label ID="lblCuitEnt" runat="server" Text="N° CUIT: " Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                            <td style="text-align: left;">
+                                                <asp:Label ID="lblDescCuitEnt" runat="server" Font-Bold="True" Font-Size="X-Small" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                    <br />
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                </div>
+                <div id="contenedor">
+                    <div style="margin: 0px auto; text-align: center;">
+                        <asp:Label ID="lblJavaError" runat="server" Text="Label" Visible="False" Font-Size="12px"
+                            ForeColor="Red"></asp:Label>
+                    </div>
+                    <asp:Panel ID="pnlContentPlaceHolder" runat="server">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </asp:Panel>
+                </div>
+            </div>
+        </div>
+        <div id="footerMainContainer">
+            <div id="footerContainer">
+                <div id="footerDataContainer">
+                    <%--<div style="margin-top: 15px;">
+                        <asp:Label runat="server" ID="lblDescripcionPie" Text="" Width="730" Font-Size="Small"
+                            ForeColor="#515151"></asp:Label>
+                    </div>--%>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+
+   var _gaq = _gaq || [];
+
+  _gaq.push(['_setAccount', 'UA-3470667-1']);
+
+  _gaq.push(['_trackPageview']);
+
+ 
+
+  (function() {
+
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+
+   'http://www') + '.google-analytics.com/ga.js';
+
+    var s = document.getElementsByTagName('script')[0];
+
+    s.parentNode.insertBefore(ga, s);
+
+  })();
+
+ 
+
+    </script>
+
+</body>
+</html>

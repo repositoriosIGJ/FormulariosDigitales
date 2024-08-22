@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using FD.Entities;
+using System.Net;
+using System.IO;
+using System.Web.Script.Serialization;
+using log4net;
+using System.Configuration;
+
+namespace FD.BusinessLayer
+{
+    public class BLPadronAfip
+    {
+        //public BLPadronAfip()
+        //{
+        //    ConfigurationManager
+        //}
+
+        public static PadronAfip Cargar(long nroCUIT, out bool errorWS)
+        {
+            errorWS = false;
+            //TODO_NOCUIT: No se usa el pedido de CUIT
+            //try
+            //{
+            //    //Traigo el proxy desde el web.config
+            //    string wsAFIP_proxy = Convert.ToString(ConfigurationManager.AppSettings["wsAFIPproxy"]);
+            //    // deshabilitado
+            //    /* web.config: <add key="wsAFIPurl" value="https://soa.afip.gob.ar/sr-padron/v2/persona/"/>
+            //    string wsAFIP_url = Convert.ToString(ConfigurationManager.AppSettings["wsAFIPurl"]);*/                
+
+            //    //EL REST DE AFIP
+            //    HttpWebRequest request;
+            //    //Cambio para la V2
+            //    ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            //    request = WebRequest.Create("https://soa.afip.gob.ar/sr-padron/v2/persona/" + nroCUIT.ToString()) as HttpWebRequest;
+            //    //request.Proxy = new WebProxy("http://proxy.jus.gov.ar:8080", true);
+            //    request.Proxy = new WebProxy(wsAFIP_proxy, true);
+            //    request.UserAgent = "Mozilla/5.0 (Windows NT 5.2; rv:46.0) Gecko/20100101 Firefox/46.0";
+            //    request.Timeout = 10 * 3000;
+            //    request.Method = "GET";
+            //    //request.ContentLength = data.Length;
+            //    request.ContentType = "application/json; charset=utf-8";
+
+            //    HttpWebResponse response = request.GetResponse() as HttpWebResponse;
+            //    StreamReader reader = new StreamReader(response.GetResponseStream());
+            //    string myjsondata = reader.ReadToEnd();
+
+            //    JavaScriptSerializer serializer = new JavaScriptSerializer();
+
+            //    PadronAfip oPadronAfip = (PadronAfip)serializer.Deserialize<PadronAfip>(myjsondata);
+
+            //    return oPadronAfip;
+            //}
+            //catch (Exception e)
+            //{
+            //    errorWS = true;
+            //    //Log.GrabarAdvertencia("ERROR en WebService - Exception: " + e.Message, "PadronAfip.Cargar", "LOCAL");
+            //    return null;
+            //}
+            return null;
+        }
+    }
+}

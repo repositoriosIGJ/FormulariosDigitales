@@ -1,0 +1,40 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="Default2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body style="background-color: #DEE4EC;">
+    <form id="form1" runat="server">
+        <table style="margin: 0px auto;">
+            <tr>
+                <td>
+                    <div style="background-image: url('Imagenes/ContenedorCuerpo.png'); background-repeat: no-repeat;
+                        width: 700px; height: 415px; border-top: solid 1px #DBDBDB; margin-top: 150px;">
+                        <table style="margin: 0px auto; text-align: center;">
+                            <tr>
+                                <td>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <img src="Imagenes/IsologoIGJ.png" alt="" width="50%" height="50%" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: large">
+                                    <br />
+                                    <br />
+                                    Este servicio se encuentra temporariamente en mantenimiento, disculpe las molestias.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

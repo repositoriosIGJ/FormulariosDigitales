@@ -1,0 +1,34 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Formulario.aspx.cs" Inherits="Formulario" Title="Untitled Page" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <script type="text/javascript" language="javascript">
+//        function closeWindow()
+//        {
+//            self.close();
+//        }
+    </script>
+</head>
+<body>
+
+<form runat="server" id="form1">
+    <asp:Label ID="Label1" runat="server" Font-Bold="true" Text="Para descargar el formulario haga click "></asp:Label>
+    <br />
+    <blockquote><input type="button" name="btnCerrar" value="Cerrar" onclick="closeWindow()" /></blockquote>
+    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="CargarDSReporte"
+        TypeName="FD.BusinessLayer.BLTransaccion" OldValuesParameterFormatString="original_{0}">
+        <SelectParameters>
+            <asp:Parameter Name="idTrans" Type="Double" />
+            <asp:Parameter Name="pathImg" Type="String" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+  </form>
+</body>
+</html>
+    
+    
+    
+    
+<%--</asp:Content>--%>
+

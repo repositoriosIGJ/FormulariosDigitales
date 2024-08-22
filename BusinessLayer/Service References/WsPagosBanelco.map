@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceReference>
+	<ProxyGenerationParameters
+		ServiceReferenceUri="https://intranet2.jus.gov.ar/GatewayWS/FacturaWs.svc"
+		Name="WsPagosBanelco"
+		NotifyPropertyChange="False"
+		UseObservableCollection="False">
+	</ProxyGenerationParameters>
+	<EndPoints>
+		<EndPoint
+			Address="https://intranet2.jus.gov.ar/GatewayWS/FacturaWs.svc"
+			BindingConfiguration="BasicHttpBinding_IFacturaServicio1"
+			Contract="FD.BusinessLayer.WsPagosBanelco.IFacturaServicio"
+			>
+		</EndPoint>
+	</EndPoints>
+</ServiceReference>

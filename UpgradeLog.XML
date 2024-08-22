@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FD">
+</Property><Property Name="Solution File" Value="D:\Desarrollo\FormularioDigital_v20\FD\FD.sln">
+</Property><Property Name="User Options File" Value="D:\Desarrollo\FormularioDigital_v20\FD\FD.suo">
+</Property><Property Name="Date" Value="martes, 08 de agosto de 2023">
+</Property><Property Name="Time" Value="13:31">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="FD.sln" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\FD.sln">
+</Event><Event ErrorLevel="0" Project="" Source="FD.suo" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\FD.suo">
+</Event><Event ErrorLevel="1" Project="FD" Source="..\FD" Description="Warning: The project file is being backed up to a relative path that differs from the original solution relative path.  The difference in folder hierarchy may create problems in opening or building the backed up solution and project.">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BusinessLayer.csproj" Description="Project file successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BusinessLayer.csproj">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BusinessLayer.csproj.user" Description="Project user file successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BusinessLayer.csproj.user">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BLBanco.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BLBanco.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BLEntidad.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BLEntidad.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BLExcepcion.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BLExcepcion.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BLFirmante.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BLFirmante.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BLFormulario.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BLFormulario.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BLLibro.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BLLibro.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BLLog.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BLLog.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BLTipoEntidad.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BLTipoEntidad.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BLTramite.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BLTramite.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BLTransaccion.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\BLTransaccion.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\Service References\WsPagosBanelco.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\Service References\WsPagosBanelco.cs">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\app.config" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\app.config">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\ClassDiagram1.cd" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\ClassDiagram1.cd">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\Service References\WsPagosBanelco.map" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\BusinessLayer\Service References\WsPagosBanelco.map">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BusinessLayer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="BusinessLayer" Source="BusinessLayer\BusinessLayer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DataAccessLayer.csproj" Description="Project file successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DataAccessLayer.csproj">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DataAccessLayer.csproj.user" Description="Project user file successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DataAccessLayer.csproj.user">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DABanco.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DABanco.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DAConexion.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DAConexion.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DAEntidad.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DAEntidad.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DAExcepcion.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DAExcepcion.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DAFirmante.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DAFirmante.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DAFormulario.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DAFormulario.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DALibro.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DALibro.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DALog.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DALog.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DATipoEntidad.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DATipoEntidad.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DATramite.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DATramite.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DATransaccion.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\DATransaccion.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\Properties\Settings.Designer.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\Web References\Zidane\Reference.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\Web References\Zidane\Reference.cs">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\app.config" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\app.config">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\Properties\Settings.settings" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\Web References\Zidane\Reference.map" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\Web References\Zidane\Reference.map">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\Web References\Zidane\WS-IGJ-Tasas.disco" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\Web References\Zidane\WS-IGJ-Tasas.disco">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\Web References\Zidane\WS-IGJ-Tasas.wsdl" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\DataAccessLayer\Web References\Zidane\WS-IGJ-Tasas.wsdl">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DataAccessLayer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DataAccessLayer" Source="DataAccessLayer\DataAccessLayer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Entities.csproj" Description="Project file successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Entities.csproj">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Entities.csproj.user" Description="Project user file successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Entities.csproj.user">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\TipoLibro.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\TipoLibro.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Libro.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Libro.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\PadronAfip.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\PadronAfip.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Banco.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Banco.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Constituyente.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Constituyente.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Denominacion.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Denominacion.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Depositante.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Depositante.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Entidad.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Entidad.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Estado.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Estado.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Firmante.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Firmante.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Formulario.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Formulario.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Log.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Log.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Operador.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Operador.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\TipoEntidad.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\TipoEntidad.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Tramite.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Tramite.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Transaccion.cs" Description="File successfully backed up as D:\Desarrollo\FormularioDigital_v20\FD\Backup\Entities\Transaccion.cs">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Entities.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Entities" Source="Entities\Entities.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="FD.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="FD.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BusinessLayer" Source="BusinessLayer\BusinessLayer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="DataAccessLayer" Source="DataAccessLayer\DataAccessLayer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Entities" Source="Entities\Entities.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

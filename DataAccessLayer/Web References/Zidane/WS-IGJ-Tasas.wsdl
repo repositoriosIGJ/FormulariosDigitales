@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetSociedad">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NroCorrelativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSociedadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSociedadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSociedades">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RazonSocial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSociedadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSociedadesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSociedadFiltradoTipo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NroCorrelativo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoSoc" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSociedadFiltradoTipoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSociedadFiltradoTipoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSociedadesFiltradoTipo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RazonSocial" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoSoc" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSociedadesFiltradoTipoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSociedadesFiltradoTipoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSociedadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSociedad" />
+  </wsdl:message>
+  <wsdl:message name="GetSociedadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSociedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSociedadesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSociedades" />
+  </wsdl:message>
+  <wsdl:message name="GetSociedadesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSociedadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSociedadFiltradoTipoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSociedadFiltradoTipo" />
+  </wsdl:message>
+  <wsdl:message name="GetSociedadFiltradoTipoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSociedadFiltradoTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSociedadesFiltradoTipoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSociedadesFiltradoTipo" />
+  </wsdl:message>
+  <wsdl:message name="GetSociedadesFiltradoTipoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSociedadesFiltradoTipoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TasasIGJSoap">
+    <wsdl:operation name="GetSociedad">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Sociedades</wsdl:documentation>
+      <wsdl:input message="tns:GetSociedadSoapIn" />
+      <wsdl:output message="tns:GetSociedadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedades">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Listado de Sociedades</wsdl:documentation>
+      <wsdl:input message="tns:GetSociedadesSoapIn" />
+      <wsdl:output message="tns:GetSociedadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedadFiltradoTipo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Sociedades</wsdl:documentation>
+      <wsdl:input message="tns:GetSociedadFiltradoTipoSoapIn" />
+      <wsdl:output message="tns:GetSociedadFiltradoTipoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedadesFiltradoTipo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traer Listado de Sociedades Filtradas tambien por Tipo de Sociedad</wsdl:documentation>
+      <wsdl:input message="tns:GetSociedadesFiltradoTipoSoapIn" />
+      <wsdl:output message="tns:GetSociedadesFiltradoTipoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TasasIGJSoap" type="tns:TasasIGJSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSociedad">
+      <soap:operation soapAction="http://tempuri.org/GetSociedad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedades">
+      <soap:operation soapAction="http://tempuri.org/GetSociedades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedadFiltradoTipo">
+      <soap:operation soapAction="http://tempuri.org/GetSociedadFiltradoTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedadesFiltradoTipo">
+      <soap:operation soapAction="http://tempuri.org/GetSociedadesFiltradoTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TasasIGJSoap12" type="tns:TasasIGJSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSociedad">
+      <soap12:operation soapAction="http://tempuri.org/GetSociedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedades">
+      <soap12:operation soapAction="http://tempuri.org/GetSociedades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedadFiltradoTipo">
+      <soap12:operation soapAction="http://tempuri.org/GetSociedadFiltradoTipo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedadesFiltradoTipo">
+      <soap12:operation soapAction="http://tempuri.org/GetSociedadesFiltradoTipo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TasasIGJ">
+    <wsdl:port name="TasasIGJSoap" binding="tns:TasasIGJSoap">
+      <soap:address location="http://sdigipro.igj.jus.gov.ar:6000/WS-IGJ-Tasas.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TasasIGJSoap12" binding="tns:TasasIGJSoap12">
+      <soap12:address location="http://sdigipro.igj.jus.gov.ar:6000/WS-IGJ-Tasas.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,352 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.IO;
+using iTextSharp.text.pdf;
+
+using FD.BusinessLayer;
+using FD.Entities;
+
+public partial class Formulario : System.Web.UI.Page
+{
+    DSDatosReporte.DTReporteDataTable DSReporte = new DSDatosReporte.DTReporteDataTable();
+    //Transaccion oTransaccion;
+    //Operador oDatosOperador;
+    //Denominacion oDenominacion;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //if (!Page.IsPostBack)
+        //{
+        //    Util.DownloadForm();
+        //}
+        //if (!Page.IsPostBack)
+        //{
+        //    BLTransaccion oBLTransaccion = new BLTransaccion();
+        //    oDenominacion = (Denominacion)Session["Denominacion"];
+        //    string denom = "";
+        //    oDatosOperador = (Operador)Session["DatosOperador"];
+
+        //    if (oDenominacion != null)
+        //    {
+        //        denom = oDenominacion.Denominacion1;
+        //    }
+        //    else
+        //    {
+        //        denom = "";
+        //    }
+
+        //    oTransaccion = oBLTransaccion.CargarDSReporte(oDatosOperador.IdTrans, oDatosOperador.Reserva, denom);
+
+        //    //string fileName = Guid.NewGuid().ToString() + ".pdf";
+        //    //string filePath = Path.Combine(Path.GetTempPath(), fileName);
+        //    //using (Stream file = File.Open(filePath, FileMode.Create))
+        //    using (Stream file = File.Open(Server.MapPath("FormListo.pdf"), FileMode.Create))
+        //    {
+        //        DescargarFormulario(file);
+        //        file.Close();
+        //    }
+        //}
+    }
+
+    //private void DescargarFormulario(Stream stream)
+    //{
+    //    string pathPDF = "";
+    //    object[] vInfoTram = (object[])Session["vInfoTram"];
+
+    //    try
+    //    {
+    //        if (!((string)vInfoTram.GetValue(0) == "6"))
+    //        {
+    //            pathPDF = Server.MapPath("Template/FormBase.pdf");
+    //        }
+    //        else
+    //        {
+    //            pathPDF = Server.MapPath("Template/FormBaseReserva.pdf");
+    //        }
+
+    //        PdfReader reader = new PdfReader(pathPDF);
+    //        PdfStamper stamper = new PdfStamper(reader, stream, '7');
+
+    //        #region Watermark
+
+    //        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Server.MapPath("Template/watermark.png"));
+    //        img.SetAbsolutePosition(10, 10);
+    //        img.Rotation = 45;
+
+    //        PdfContentByte waterMark = stamper.GetUnderContent(1);
+    //        waterMark.AddImage(img);
+
+    //        #endregion
+
+    //        #region Datos Formulario
+
+    //        //FORMULRIO
+    //        stamper.AcroFields.SetField("txtLetraFormulario", oTransaccion.Formulario.Descripcion.ToString());
+    //        stamper.AcroFields.SetField("txtValorTimbrado", oTransaccion.Formulario.Precio.ToString());
+    //        stamper.AcroFields.SetField("txtFecha", oTransaccion.FechaAlta.ToShortDateString());
+
+    //        //FIRMANTE
+    //        stamper.AcroFields.SetField("txtNombreFirmante", Server.HtmlDecode(oTransaccion.Firmante.Nombre.ToString()));
+    //        stamper.AcroFields.SetField("txtApellidoFirmante", Server.HtmlDecode(oTransaccion.Firmante.Apellido.ToString()));
+    //        stamper.AcroFields.SetField("txtDNIFirmante", oTransaccion.Firmante.DNI.ToString());
+    //        stamper.AcroFields.SetField("txtMailFirmante", oTransaccion.Firmante.Mail.ToString());
+
+    //        //TRAMITE
+    //        stamper.AcroFields.SetField("txtTramDesc", Server.HtmlDecode(oTransaccion.Tramite.Descripcion.ToString()));
+
+    //        if (!((string)vInfoTram.GetValue(0) == "6")) //RESERVA DE DENOMINACION
+    //        {
+    //            //ENTIDAD
+    //            if (oTransaccion.Entidad.NroCorrelativo != 0)
+    //            {
+    //                stamper.AcroFields.SetField("txtNroCorrelativo", oTransaccion.Entidad.NroCorrelativo.ToString());
+    //            }
+    //            else
+    //            {
+    //                stamper.AcroFields.SetField("txtNroCorrelativo", "");
+    //            }
+    //            stamper.AcroFields.SetField("txtNomEntidad", Server.HtmlDecode(oTransaccion.Entidad.Nombre.ToString()));
+    //            stamper.AcroFields.SetField("txtTipoEntidad", Server.HtmlDecode(oTransaccion.Entidad.TipoSociedad.Descripcion.ToString()));
+
+    //            //TRAMITE URGENTE
+    //            if (oTransaccion.Tramite.FlagUrgente)
+    //            {
+    //                stamper.AcroFields.SetField("txtUrgente", "SI");
+    //            }
+    //            else
+    //            {
+    //                stamper.AcroFields.SetField("txtUrgente", "NO");
+    //            }
+    //            //DATOS ADJUNTOS
+    //            stamper.AcroFields.SetField("txtMotivo", oTransaccion.Motivo.ToString());
+    //        }
+    //        else
+    //        {
+    //            Denominacion oDenominacion = (FD.Entities.Denominacion)Session["Denominacion"];
+
+    //            //OPCIONES DE DENOMINACION
+    //            stamper.AcroFields.SetField("txtDenomOp1", oDenominacion.Denominacion1.ToString());
+    //            stamper.AcroFields.SetField("txtDenomOp2", oDenominacion.Denominacion2.ToString());
+    //            stamper.AcroFields.SetField("txtDenomOp3", oDenominacion.Denominacion3.ToString());
+
+    //            //DATOS CONSTITUYENTE
+    //            switch (oDenominacion.Tipo)
+    //            {
+    //                case 0:
+    //                    stamper.AcroFields.SetField("txtNyAConst1", oDenominacion.Constituyente[0].NombreYApellido.ToString());
+    //                    stamper.AcroFields.SetField("txtNyAConst2", oDenominacion.Constituyente[1].NombreYApellido.ToString());
+    //                    stamper.AcroFields.SetField("txtDNIConst1", oDenominacion.Constituyente[0].DNI.ToString());
+    //                    stamper.AcroFields.SetField("txtDNIConst2", oDenominacion.Constituyente[1].DNI.ToString());
+    //                    break;
+    //                case 1:
+    //                    stamper.AcroFields.SetField("txtDenomCosnt1", oDenominacion.Constituyente[0].Denominacion1.ToString());
+    //                    stamper.AcroFields.SetField("txtDenomCosnt2", oDenominacion.Constituyente[0].Denominacion2.ToString());
+    //                    break;
+    //                case 2:
+    //                    stamper.AcroFields.SetField("txtDNIConst1", oDenominacion.Constituyente[0].DNI.ToString());
+    //                    stamper.AcroFields.SetField("txtNyAConst1", oDenominacion.Constituyente[0].NombreYApellido.ToString());
+    //                    stamper.AcroFields.SetField("txtDenomCosnt1", oDenominacion.Constituyente[0].Denominacion1.ToString());
+    //                    break;
+    //            }
+    //        }
+
+    //        #endregion
+
+    //        #region Codigo de Barras
+
+    //        //CODIGO DE BARRAS
+    //        PdfContentByte overContent = stamper.GetOverContent(1);
+    //        Barcode39 codebar = new Barcode39();
+    //        //BarcodeInter25 codebar = new BarcodeInter25();
+
+    //        //oDatosOperador = (Operador)Session["DatosOperador"];
+    //        codebar.Code = oDatosOperador.CodeBar;
+    //        codebar.StartStopText = false;
+
+    //        // Get barcode image placeholder
+    //        float[] barcodeArea = stamper.AcroFields.GetFieldPositions("codBarras");
+    //        iTextSharp.text.Rectangle rect = new iTextSharp.text.Rectangle(Convert.ToInt32(barcodeArea[1]), Convert.ToInt32(barcodeArea[2]), Convert.ToInt32(barcodeArea[3]), Convert.ToInt32(barcodeArea[4]));
+    //        codebar.Size = 10;
+    //        codebar.BarHeight = codebar.Size * 5f;
+
+
+    //        iTextSharp.text.Image imageBarCode = codebar.CreateImageWithBarcode(overContent, null, null);
+    //        imageBarCode.ScaleToFit(rect.Width, rect.Height);
+    //        imageBarCode.SetAbsolutePosition(barcodeArea[1] + (rect.Width - imageBarCode.ScaledWidth) / 2, barcodeArea[2] + (rect.Height - imageBarCode.ScaledHeight) / 2);
+    //        // Add barcode image
+    //        overContent.AddImage(imageBarCode);
+
+    //        #endregion
+
+    //        stamper.SetFullCompression();
+    //        stamper.FormFlattening = true;
+    //        stamper.Close();
+
+    //        //string fileName = Path.Combine(Path.GetTempPath(), Request["file"]);
+
+    //        #region Descarga de Formulario
+
+    //        FileStream oFs;
+    //        //string strContentType;
+    //        string strPath = Server.MapPath("FormListo.pdf");
+    //        String strFileName = "FormListo.pdf";
+            
+    //        oFs = File.Open(strPath + strFileName, FileMode.Open);
+    //        byte[] bytBytes = new byte[oFs.Length];
+
+    //        oFs.Read(bytBytes, 0,Convert.ToInt32(oFs.Length));
+    //        oFs.Close();
+
+    //        HttpContext.Current.Response.ClearContent();
+    //        HttpContext.Current.Response.ClearHeaders();
+
+    //        Response.AddHeader("Content-disposition","attachment; filename=FormularioIGJ.pdf");
+    //        Response.ContentType = "application/pdf";
+    //        Response.BinaryWrite(bytBytes);
+    //        Response.End();
+
+
+    //        //HttpContext.Current.Response.ContentType = "application/pdf";
+    //        //HttpContext.Current.Response.AddHeader("Content-Disposition", "attachment;filename=FormularioIGJ.pdf");
+
+    //        //using (Stream file = File.Open(Server.MapPath("FormListo.pdf"), FileMode.Open))
+    //        //{
+    //        //    byte[] buffer = new Byte[10000];
+    //        //    int length;
+    //        //    long dataToRead = file.Length;
+    //        //    while (dataToRead > 0)
+    //        //    {
+    //        //        if (Response.IsClientConnected)
+    //        //        {
+    //        //            length = file.Read(buffer, 0, 10000);
+    //        //            Response.OutputStream.Write(buffer, 0, length);
+    //        //            Response.Flush();
+    //        //            buffer = new Byte[10000];
+    //        //            dataToRead = dataToRead - length;
+    //        //        }
+    //        //        else
+    //        //        {
+    //        //            dataToRead = -1;
+    //        //        }
+    //        //    }
+    //        //    file.Close();
+    //        //}
+    //        //File.Delete("FormListo.pdf");
+
+    //        //HttpContext.Current.Response.End();
+
+    //        #endregion
+
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        string fileName = "Errores.txt";
+    //        FileStream streamEx = new FileStream(Server.MapPath(fileName), FileMode.Append, FileAccess.Write);
+    //        StreamWriter writer = new StreamWriter(streamEx);
+
+    //        writer.WriteLine("error en la creacion/descarga del formulario - " + ex.Message.ToString());
+    //        writer.Close();
+    //    }
+    //    finally
+    //    {
+    //        Session.Abandon();
+    //    }
+
+
+        //try
+        //{
+        //    string path = Server.MapPath("CodeBars");
+        //    DSDatosReporte.DTReporteDataTable DSReporte = new DSDatosReporte.DTReporteDataTable();
+        //    BLTransaccion oBLTransaccion = new BLTransaccion();
+
+        //    //Recupero los datos de ID de Transaccion y numero de codigo de barra,
+        //    //asi lo mando al metodo de la clase Util para generar la imagen 
+        //    //y guardarla en disco.
+        //    Operador oDatosOperador = (Operador)Session["DatosOperador"];
+
+        //    double idTrans = oDatosOperador.IdTrans;
+        //    string numCodBar = oDatosOperador.CodeBar;
+
+        //    LocalReport localReport = new LocalReport();
+        //    localReport.ReportPath = Server.MapPath("Report.rdlc");
+        //    localReport.EnableExternalImages = true;
+        //    ReportDataSource reportDataSource = new ReportDataSource("DSDatosReporte_DTReporte", oBLTransaccion.CargarDSReporte(idTrans, Util.GenerarImagenCodigoBarra(numCodBar, path)).Tables["DTReporte"]);
+        //    localReport.DataSources.Add(reportDataSource);
+        //    localReport.Refresh();
+        //    //------------------------------------------------------
+        //string reportType = "PDF";
+        //string mimeType;
+        //string encoding;
+        //string fileNameExtension;
+
+        //    //The DeviceInfo settings should be changed based on the reportType
+        //    //http://msdn2.microsoft.com/en-us/library/ms155397.aspx
+        //    //string deviceInfo =
+        //    //"<DeviceInfo>" +
+        //    //"  <OutputFormat>PDF</OutputFormat>" +
+        //    //"  <PageWidth>8.5in</PageWidth>" +
+        //    //"  <PageHeight>11in</PageHeight>" +
+        //    //"  <MarginTop>0.5in</MarginTop>" +
+        //    //"  <MarginLeft>1in</MarginLeft>" +
+        //    //"  <MarginRight>1in</MarginRight>" +
+        //    //"  <MarginBottom>0.5in</MarginBottom>" +
+        //    //"</DeviceInfo>";
+
+        //    Warning[] warnings;
+        //    string[] streams;
+        //    byte[] renderedBytes;
+
+        //    //Render the report
+        //    renderedBytes = localReport.Render(
+        //                                       reportType,
+        //                                       //deviceInfo,
+        //                                       null,
+        //                                       out mimeType,
+        //                                       out encoding,
+        //                                       out fileNameExtension,
+        //                                       out streams,
+        //                                       out warnings);
+
+        //    Response.Clear();
+        //    Response.ContentType = mimeType;
+        //    Response.AddHeader("content-disposition", "attachment; filename=Formulario IGJ." + fileNameExtension);
+        //    Response.BinaryWrite(renderedBytes);
+        //    Response.End();
+        //}
+        //catch (Exception ex)
+        //{
+        //    string fileName = "Errores.txt";
+        //    FileStream stream = new FileStream(Server.MapPath(fileName), FileMode.Append, FileAccess.Write);
+        //    StreamWriter writer = new StreamWriter(stream);
+
+        //    writer.WriteLine("error en la creacion/descarga del formulario - " + ex.Message.ToString());
+        //    writer.Close();
+        //}
+
+
+        /*****************************************/
+
+        //this.ReportViewer1.ProcessingMode = ProcessingMode.Local;
+        //LocalReport oLocalReport = new LocalReport();
+        //oLocalReport.ReportPath = "Report.rdlc";
+        ////ReportViewer1.ExportContentDisposition = ContentDisposition.AlwaysAttachment;
+
+        //ReportDataSource oReportDS = new ReportDataSource();
+        //oReportDS.Name = "DatosReporte_Data";
+        //oReportDS.Value = oBLTransaccion.CargarDSReporte(idTrans).Tables["DTReporte"];
+        ////oLocalReport.DataSources.Add(oReportDS);
+        //ReportViewer1.LocalReport.DataSources.Add(oReportDS);
+        //ReportViewer1.LocalReport.Refresh();
+
+        //*****************************************
+        //RenderReport(this.ReportViewer1);
+    
+}
